@@ -1,1 +1,5 @@
-FROM mcr.microsoft.com/dotnet/core/sdk
+FROM gitpod/workspace-full
+
+USER gitpod
+
+RUN npm install -g dotnet-sdk;

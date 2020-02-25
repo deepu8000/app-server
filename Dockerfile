@@ -1,5 +1,3 @@
-FROM gitpod/workspace-full
+FROM mcr.microsoft.com/dotnet/core/sdk
 
-USER gitpod
-
-RUN npm install -g dotnet-sdk;
+RUN dotnet tool install --global dotnet-aspnet-codegenerator

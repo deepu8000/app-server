@@ -15,6 +15,7 @@ namespace app_server
 {
     public class Startup
     {
+        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -22,6 +23,7 @@ namespace app_server
 
         public IConfiguration Configuration { get; }
 
+        [Route("")]
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -47,7 +49,7 @@ namespace app_server
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                //endpoints.MapControllers();
                 endpoints.MapHub<AppHub>("/AppHub");
             });
         }
